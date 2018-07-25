@@ -11,8 +11,14 @@
 |
 */
 
+Route::get('/create','ElasticController@createDB')->name('create');
+Route::get('/Test','ElasticController@Test()');
+
 Route::get('/', function () {
 
+    // Article::createIndex($shards = null, $replicas = null);
+    // Article::putMapping($ignoreConflicts = true);
+    // Article::addAllToIndex();
 
     return view('welcome');
 });

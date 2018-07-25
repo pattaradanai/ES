@@ -147,6 +147,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Elasticquent\ElasticquentServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+
        
 
         /*
@@ -211,6 +213,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Es' => Elasticquent\ElasticquentElasticsearchFacade::class,
+        
        
 
     ],
