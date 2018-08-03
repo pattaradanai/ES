@@ -115,22 +115,7 @@ public function importDB(){
                                                                 "html_strip"
                                                             ]  
                                                      ]
-                                                 ],
-                                                'search'=>[
-                                                    'my_analyzer'=> [ 
-                                                        'type'=> 'custom',
-                                                        'tokenizer'=> 'standard',
-                                                        'filter'=> [
-                                                            'lowercase',
-                                                            'shingram',
-                                                            'Ngram'
-                                                         ],
-                                                         "char_filter"=> [
-                                                             "html_strip"
-                                                         ] 
-                                                    ]
-
-                                                ]
+                                                 ]
                                         ]
                                      ],
                             'mappings'=> [
