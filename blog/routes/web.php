@@ -1,5 +1,5 @@
 <?php
-
+use App\Article;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,14 +11,31 @@
 |
 */
 
-Route::get('/create','ElasticController@createDB')->name('create');
-Route::get('/Test','ElasticController@Test()');
+
 
 Route::get('/', function () {
-
-    // Article::createIndex($shards = null, $replicas = null);
-    // Article::putMapping($ignoreConflicts = true);
-    // Article::addAllToIndex();
-
     return view('welcome');
 });
+Route::get('/search', function () {
+    return view('template');
+});
+Route::get('/getindex', function () {
+    return view('search');
+});
+
+
+
+
+   
+
+
+Route::get('testes','ClientController@Test');
+Route::get('ngram','ClientController@Ngrams')->name('ngram');
+Route::get('getngram','ClientController@getNgrams')->name('getngram');
+Route::get('setmap','ClientController@importDB')->name('setMapping');
+Route::get('add','ClientController@addindex')->name('addindex');
+Route::get('getData','ClientController@getData')->name('getData');
+
+Route::post('datasearch','ClientController@search')->name('essearch');
+
+    

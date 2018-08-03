@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Elasticquent\ElasticquentServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+       
 
        
 

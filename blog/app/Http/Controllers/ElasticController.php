@@ -8,21 +8,10 @@ use App\Article;
 
 class ElasticController extends Controller
 {
-    public  function createDB(){
-     
-        $DB = new DB();
-        $DB ->id = "1159";
-        $DB ->title = bcrypt("food");
-        $DB ->body =  "KFC";
-        $DB ->tags = "Deliverry";
-        $DB ->save();
-    }
+    public function up()
 
-    public function Test(){
-        Article::addAllToIndex();
-        $articles = Article::where('id', '<', 200)->get();
-        $articles->addToIndex();
-        Article::reindex()
-        return
+    {
+       $test =  Article::putMapping($ignoreConflicts = true);
+       dd($test);
     }
 }
